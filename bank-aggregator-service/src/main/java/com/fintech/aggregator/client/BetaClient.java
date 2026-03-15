@@ -8,9 +8,9 @@ public class BetaClient {
 
 	private final RestTemplate restTemplate = new RestTemplate();
 
-	public String getAccounts() {
+	public String getAccounts(String userId) {
 		return restTemplate.getForObject(
-				"http://localhost:8082/accounts/101",
+				"http://localhost:8082/accounts/" + userId,
 				String.class);
 	}
 }

@@ -15,13 +15,13 @@ public class AggregatorController {
 	@Autowired
 	private BetaClient betaClient;
 
-	@GetMapping("/alpha/accounts")
-	public String alphaAccounts() {
-		return alphaClient.getAccounts();
+	@GetMapping("/alpha/accounts/{userId}")
+	public String alphaAccounts(@PathVariable String userId) {
+		return alphaClient.getAccounts(userId);
 	}
 
-	@GetMapping("/beta/accounts")
-	public String betaAccounts() {
-		return betaClient.getAccounts();
+	@GetMapping("/beta/accounts/{userId}")
+	public String betaAccounts(@PathVariable String userId) {
+		return betaClient.getAccounts(userId);
 	}
 }
