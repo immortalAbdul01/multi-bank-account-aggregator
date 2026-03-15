@@ -10,7 +10,7 @@ public class AlphaClient {
 
 	public String getAccounts(String userId) {
 		return restTemplate.getForObject(
-				"http://localhost:8080/accounts/" + userId,
+				"http://localhost:8081/accounts/" + userId,
 				String.class);
 	}
 }

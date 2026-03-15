@@ -12,7 +12,7 @@ public class AccountsController {
 	public List<Account> getAccounts(@PathVariable String userId) {
 
 		return List.of(
-				new Account("A101", "Alpha Bank", 15000),
-				new Account("A102", "Alpha Bank", 8200));
+				new Account("B101", "Beta Bank", 15000),
+				new Account("B102", "Beta Bank", 8200));
 	}
 }
